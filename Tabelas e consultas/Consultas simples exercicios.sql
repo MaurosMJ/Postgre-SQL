@@ -43,7 +43,7 @@ SELECT
 FROM
 	CLIENTES
 WHERE
-	LOWER(BAIRRO) = 'centro';
+	LOWER(BAIRRO) in ('centro', 'cto.', 'ctr.');
 
 --6. Os clientes que moram em complementos que iniciam com a letra “A”
 SELECT
@@ -88,7 +88,7 @@ SELECT
 FROM
 	CLIENTES
 WHERE
-	LOWER(NACIONALIDADE) = 'brasileira';
+	LOWER(NACIONALIDADE) like 'brasil%';
 
 --11. Os clientes que informaram o número da residência
 SELECT
@@ -115,7 +115,7 @@ SELECT
 FROM
 	CLIENTES
 WHERE
-	DATA_NASCIMENTO BETWEEN '01/01/2000' AND '01/01/2002';
+	DATA_NASCIMENTO BETWEEN '01-01-2000' AND '01-01-2002';
 
 --14. O nome do cliente e o logradouro, número, complemento, bairro, município e UF concatenado de todos os clientes
 SELECT
