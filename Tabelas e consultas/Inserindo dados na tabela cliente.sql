@@ -39,7 +39,7 @@ VALUES
 		TO_DATE('30-01-2001', 'dd-mm-yyyy'),
 		'M',
 		'Estudante',
-		'Brasileiro',
+		'Brasileira',
 		'Rua Joaquim Nabuco',
 		'23',
 		'Casa',
@@ -74,12 +74,12 @@ VALUES
 		TO_DATE('04-01-1987', 'dd-mm-yyyy'),
 		'M',
 		'Engenheiro',
-		'Brasileiro',
+		'Brasileira',
 		'Rua das Limas',
 		'200',
 		'Ap',
 		'Centro',
-		'Poro Uniao', --simulando erro de digitacao
+		'P. União', --simulando erro de digitacao
 		'SC'
 	);
 
@@ -109,7 +109,7 @@ VALUES
 		TO_DATE('01-10-1967', 'dd-mm-yyyy'),
 		'M',
 		'Pedreiro',
-		'Brasileiro',
+		'Brasileira',
 		'Rua das Laranjeiras',
 		'300',
 		'Apart',
@@ -146,7 +146,7 @@ VALUES
 		TO_DATE('10-09-1989', 'dd-mm-yyyy'),
 		'F',
 		'Jornalista',
-		'Brasileiro',
+		'Brasileira',
 		'Rua das Limas',
 		'240',
 		'Casa',
@@ -246,17 +246,17 @@ VALUES
 	(
 		NEXTVAL('clientes_seq'),
 		'Anderson',
-		'99982828181',
-		'12323',
-		TO_DATE('01-01-2000', 'dd-mm-yyyy'),
+		null,
+		null,
+		null,
 		'M',
 		'Prof.',
 		'Italiano',
-		'Av. Beira Mar',
-		'300',
-		NULL,
-		'Centro',
-		'São Paulo',
+		'Av. Brasil',
+		'100',
+		'Apartamento',
+		'Santa Rosa',
+		'Rio de Janeiro',
 		'SP'
 	);
 
@@ -282,7 +282,7 @@ VALUES
 		NEXTVAL('clientes_seq'),
 		'Camila',
 		'9998282828',
-		'10-10-2001',
+		null,
 		TO_DATE('10-10-2001', 'dd-mm-yyyy'),
 		'F',
 		'Professora',
@@ -290,8 +290,8 @@ VALUES
 		'Rua Central',
 		'4333',
 		NULL,
-		'Santa Rosa',
-		'Rio de Janeiro',
+		'Centro',
+		'Uberlância',
 		'MG'
 	);
 
@@ -316,12 +316,12 @@ VALUES
 	(
 		NEXTVAL('clientes_seq'),
 		'Cristiano',
-		'8828282828',
-		'32323',
-		TO_DATE('01-02-2000', 'dd-mm-yyyy'),
+		null,
+		null,
+		null,
 		'M',
 		'Estudante',
-		'Brasileira',
+		'Alemã',
 		'Rua do Centro',
 		'877',
 		'Casa',
@@ -353,15 +353,15 @@ VALUES
 		'Fabricio',
 		'82828282828',
 		'32323',
-		TO_DATE('01-01-2000', 'dd-mm-yyyy'),
+		null,
 		'M',
 		'Estudante',
-		'Brasileira',
-		'Rua das Laranjeiras',
-		'100',
-		'Casa',
-		'C. Nova',
-		'Canoinhas',
+		'Brasileiro',
+		null,
+		null,
+		null,
+		null,
+		'PU',
 		'SC'
 	);
 
@@ -386,17 +386,17 @@ VALUES
 	(
 		NEXTVAL('clientes_seq'),
 		'Fernanda',
-		'88818181818',
-		'88188',
-		TO_DATE('10-02-2000', 'dd-mm-yyyy'),
+		null,
+		null,
+		null,
 		'F',
-		'Estud.',
+		null,
 		'Brasileira',
-		'Rua das Laranjeiras',
-		'200',
-		'Casa',
-		'C. Nova',
-		'Canoinhas',
+		null,
+		null,
+		null,
+		null,
+		'Porto União',
 		'SC'
 	);
 
@@ -422,10 +422,45 @@ VALUES
 		NEXTVAL('clientes_seq'),
 		'Gilmar',
 		'88818181818',
-		'88888',
+		'888',
 		TO_DATE('10-02-2000', 'dd-mm-yyyy'),
 		'M',
 		'Estud.',
+		null,
+		'Rua das Laranjeiras',
+		'200',
+		null,
+		'C. Nova',
+		'Canoinhas',
+		'SC'
+	);
+
+INSERT INTO
+	CLIENTES (
+		IDCLIENTE,
+		NOME,
+		CPF,
+		RG,
+		DATA_NASCIMENTO,
+		GENERO,
+		PROFISSAO,
+		NACIONALIDADE,
+		LOGRADOURO,
+		NUMERO,
+		COMPLEMENTO,
+		BAIRRO,
+		MUNICIPIO,
+		UF
+	)
+VALUES
+	(
+		NEXTVAL('clientes_seq'),
+		'Diego',
+		'1010191919',
+		'111939',
+		null,
+		'M',
+		'Professor',
 		'Alemão',
 		'Rua Central',
 		'455',
@@ -455,54 +490,19 @@ INSERT INTO
 VALUES
 	(
 		NEXTVAL('clientes_seq'),
-		'Diego',
-		'1010191919',
-		'111939',
-		TO_DATE('01-01-2000', 'dd-mm-yyyy'),
-		'M',
-		'Professor',
-		'Brasileira',
-		'Rua Central',
-		'455',
-		'Casa',
-		'Cidade N.',
-		'São Paulo',
-		'SP'
-	);
-
-INSERT INTO
-	CLIENTES (
-		IDCLIENTE,
-		NOME,
-		CPF,
-		RG,
-		DATA_NASCIMENTO,
-		GENERO,
-		PROFISSAO,
-		NACIONALIDADE,
-		LOGRADOURO,
-		NUMERO,
-		COMPLEMENTO,
-		BAIRRO,
-		MUNICIPIO,
-		UF
-	)
-VALUES
-	(
-		NEXTVAL('clientes_seq'),
 		'Jeferson',
-		'10101919191',
-		'123123123',
+		null,
+		null,
 		TO_DATE('01-07-1983', 'dd-mm-yyyy'),
 		'M',
 		NULL,
 		'Brasileiro',
-		'Rua Central',
-		'100',
-		'Casa',
-		'Cidade N.',
-		'São Paulo',
-		'SP'
+		null,
+		null,
+		null,
+		null,
+		'União da Vitória',
+		'PR'
 	);
 
 INSERT INTO
@@ -526,18 +526,18 @@ VALUES
 	(
 		NEXTVAL('clientes_seq'),
 		'Jessica',
-		'82828282828',
-		'121231231',
-		TO_DATE('01-07-1983', 'dd-mm-yyyy'),
+		null,
+		null,
+		null,
 		'F',
 		'Estudante',
-		'Brasileira',
-		'Av. Beira Mar',
-		'100',
-		'Casa',
-		'Centro',
-		'São Paulo',
-		'SP'
+		null,
+		null,
+		null,
+		null,
+		null,
+		'União da Vitória',
+		'PR'
 	);
 
 COMMIT;
